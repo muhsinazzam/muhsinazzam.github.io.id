@@ -16,8 +16,8 @@ class Patient:
 def index():
     return render_template('index.html', patients=patients)
 
-@app.route('/add_patient', methods=['POST'])
-def add_patient():
+@app.route('/pasien', methods=['POST'])
+def pasien():
     id = len(patients) + 1
     name = request.form.get('name')
     age = request.form.get('age')
