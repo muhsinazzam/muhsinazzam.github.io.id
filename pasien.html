@@ -1,0 +1,25 @@
+<html>
+<head>
+    <title>Daftar Pasien</title>
+</head>
+<body>
+    <h2>Daftar Pasien</h2>
+    <table border="3">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+        {% for patient in patients %}
+        <tr>
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.gender }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Kembali ke Daftar Pasien</a>
+</body>
+</html>

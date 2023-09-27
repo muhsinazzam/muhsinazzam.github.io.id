@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hasil Pencarian</title>
+</head>
+<body>
+    <h2>Hasil Pencarian untuk {{ search_name }}</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Umur</th>
+            <th>Jenis Kelamin</th>
+        </tr>
+        {% for patient in search_result %}
+        <tr>
+            <td>{{ patient.id }}</td>
+            <td>{{ patient.name }}</td>
+            <td>{{ patient.age }}</td>
+            <td>{{ patient.gender }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">Kembali ke Daftar Pasien</a>
+</body>
+</html>
